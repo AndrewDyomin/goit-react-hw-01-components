@@ -1,9 +1,9 @@
-
+import { UpperArea, CardTitle } from './Title.styled';
 
 export const Title = () => {
     return (
-        <div>
-            <h2>Upload stats</h2>
-        </div>
+        <UpperArea>
+            <CardTitle>Upload stats</CardTitle>
+        </UpperArea>
     );
 };

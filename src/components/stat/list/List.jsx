@@ -1,14 +1,23 @@
+import { StatsList, StatsItem, StatsTopic, StatsValue } from './List.styled';
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+};
 
 export const List = ({ stats }) => {
     return (
-        <ul>
+        <StatsList>
             {stats.map(item => (
-                <li key={item.id}>
-                    <span>{item.label}</span>
-                    <span>{item.percentage}%</span>
-                </li>
+                <StatsItem key={item.id} color={getRandomColor()}>
+                    <StatsTopic>{item.label}</StatsTopic>
+                    <StatsValue>{item.percentage}%</StatsValue>
+                </StatsItem>
             ))}
-        </ul>
+        </StatsList>
     );
 };
