@@ -1,10 +1,10 @@
-import {Item} from 'components/profiles/info-index/info-index.styled';
+import { Item, Topic, Value } from 'components/profiles/info-index/info-index.styled';
 
 export const InfoIndex = ({ stat, name }) => {
     return (
         <Item>
-            <span>{name}</span>
-            <span>{stat}</span>
+            <Topic>{name}</Topic>
+            <Value>{stat}</Value>
         </Item>
     );
 }

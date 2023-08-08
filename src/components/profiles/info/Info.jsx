@@ -1,18 +1,18 @@
-import {List} from 'components/profiles/info/Info.styled';
+import { List, ListItem } from 'components/profiles/info/Info.styled';
 import {InfoIndex} from 'components/profiles/info-index/info-index';
 
 export const Info = ({ user }) => {
     return (
       <List>
-          <li>
+          <ListItem>
                 <InfoIndex name='Followers' stat={user.stats.followers}/>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
                 <InfoIndex name='Views' stat={user.stats.views}/>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
                  <InfoIndex name='likes' stat={user.stats.likes}/>
-          </li>
+          </ListItem>
       </List>
     );
   };

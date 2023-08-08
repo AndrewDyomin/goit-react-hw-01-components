@@ -6,5 +6,13 @@ export const Item = styled.div`
     flex-direction: column;
     text-align: center;
     padding: 20px;
-    min-width: 200px;
+
+`;
+
+export const Topic = styled.span`
+    font-size: 12px;
+    color: #555;
+`;
+export const Value = styled.span`
+    font-weight: bold;
 `;

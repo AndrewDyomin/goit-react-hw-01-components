@@ -1,16 +1,16 @@
-
+import { FaceCard, FaceImage, FaceName, FaceContacts } from './Card.styled';
 
 export const Card = ({ user }) => {
     return (
-      <div>
-        <img
+      <FaceCard>
+        <FaceImage
           src={user.avatar}
           alt="User avatar"
         />
-        <p className="name">{user.username}</p>
-        <p className="tag">@{user.tag}</p>
-        <p className="location">{user.location}</p>
-      </div>
+        <FaceName className="name">{user.username}</FaceName>
+        <FaceContacts className="tag">@{user.tag}</FaceContacts>
+        <FaceContacts className="location">{user.location}</FaceContacts>
+      </FaceCard>
     );
   };
   
