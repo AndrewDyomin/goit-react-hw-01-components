@@ -17,8 +17,6 @@ const getStatusColor = ({ $status }) => {
             return 'green';
         case 'false':
             return 'red';
-        dafault:
-            return 'grey';
     }
 }
 
