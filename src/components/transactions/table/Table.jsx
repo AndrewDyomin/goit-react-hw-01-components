@@ -7,9 +7,9 @@ export const TransactionHistory = () => {
         <Table>
             <thead>
                 <HeaderList>
-                    <Header>Type</Header>
-                    <Header>Amount</Header>
-                    <Header>Currency</Header>
+                    <Header key='1'>Type</Header>
+                    <Header key='2'>Amount</Header>
+                    <Header key='3'>Currency</Header>
                 </HeaderList>
             </thead>
             <Line>

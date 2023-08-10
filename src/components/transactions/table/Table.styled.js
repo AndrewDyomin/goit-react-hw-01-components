@@ -7,6 +7,7 @@ export const Table = styled.table`
     margin: 50px auto;
     text-align: center;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `;
 
 export const HeaderList = styled.tr`
@@ -35,7 +36,7 @@ export const Header = styled.th`
 `;
 
 export const Line = styled.tbody`
-:nth-child(2n + 1) {
+tr:nth-child(2n + 2) {
     background-color: #b9bbbc;
   }
 `;

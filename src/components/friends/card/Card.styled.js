@@ -11,12 +11,14 @@ export const Name = styled.p`
     font-size: 20px;
 `;
 
-const getStatusColor = ({ status }) => {
-    switch (status) {
+const getStatusColor = ({ $status }) => {
+    switch ($status) {
         case 'true':
             return 'green';
         case 'false':
             return 'red';
+        default:
+            return 'grey';
     }
 }
 
