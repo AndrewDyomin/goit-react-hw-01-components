@@ -1,13 +1,28 @@
-import {List} from '../list/List';
-import {Title} from '../title/Title';
-import statData from 'components/stat/path/data.json';
-import { Container } from './Statistics.styled';
+import { Container, StatsList, StatsItem, StatsTopic, StatsValue, UpperArea, CardTitle } from './Statistics.styled';
 
-export function Statistics () {
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+export function Statistics ({ title, stats }) {
     return (
         <Container>
-          <Title />
-          <List stats={statData} />
+          <UpperArea>
+            <CardTitle>{title}</CardTitle>
+          </UpperArea>
+          <StatsList>
+            {stats.map(item => (
+                <StatsItem key={item.id} color={getRandomColor()}>
+                    <StatsTopic>{item.label}</StatsTopic>
+                    <StatsValue>{item.percentage}%</StatsValue>
+                </StatsItem>
+            ))}
+          </StatsList>
         </Container>
       );
 };
